@@ -1,0 +1,14 @@
+npm init -y
+// makes package.json file
+npm i express colors morgan dotenv
+//to run server
+on running `npm run server`
+//to run application on local
+npm start
+
+//after setting up and running mongoDB we get -
+Server running on port 8080
+Server Running On ac-vqolvrv-shard-00-01.ll69sii.mongodb.net
+on running `npm run server`
+// downloading react dependencies
+npm i axios react-router-dom redux react-redux 
