@@ -15,7 +15,7 @@ const Analytics = ({ allTransaction }) => {
   ];
 
   // total transaction
-  const totalTransaction = allTransaction.length;
+  const totalTransaction = allTransaction;
   const totalIncomeTransactions = allTransaction.filter(
     (transaction) => transaction.type === "income"
   );
@@ -23,9 +23,9 @@ const Analytics = ({ allTransaction }) => {
     (transaction) => transaction.type === "expense"
   );
   const totalIncomePercent =
-    (totalIncomeTransactions.length / totalTransaction) * 100;
+    (totalIncomeTransactions / totalTransaction) * 100;
   const totalExpensePercent =
-    (totalExpenseTransactions.length / totalTransaction) * 100;
+    (totalExpenseTransactions / totalTransaction) * 100;
 
   //total turnover
   const totalTurnover = allTransaction.reduce(
@@ -41,9 +41,9 @@ const Analytics = ({ allTransaction }) => {
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
   const totalIncomeTurnoverPercent =
-    (totalIncomeTurnover.length / totalTurnover) * 100;
+    (totalIncomeTurnover / totalTurnover) * 100;
   const totalExpenseTurnoverPercent =
-    (totalExpenseTurnover.length / totalTurnover) * 100;
+    (totalExpenseTurnover / totalTurnover) * 100;
   return (
     <>
       <div className="row m-3">
@@ -54,10 +54,10 @@ const Analytics = ({ allTransaction }) => {
             </div>
             <div className="card-body">
               <h5 className="text-success">
-                Income : {totalIncomeTransactions.length}
+                Income : {totalIncomeTransactions}
               </h5>
               <h5 className="text-danger">
-                Expense : {totalExpenseTransactions.length}
+                Expense : {totalExpenseTransactions}
               </h5>
               <div className="d-flex flex-column align-items-center">
                 <Progress

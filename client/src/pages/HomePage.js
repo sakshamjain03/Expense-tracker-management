@@ -84,7 +84,7 @@ const HomePage = () => {
         setAlltransaction(res.data);
         setLoading(false);
       } catch (error) {
-        message.error("Ftech Issue With Tranction");
+        message.error("Fetch Issue With Transaction");
       }
     };
     getAllTransactions();
@@ -95,7 +95,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       await axios.post("/api/v1/transactions/delete-transaction", {
-        transacationId: record._id,
+        transactionId: record._id,
       });
       setLoading(false);
       message.success("Transaction Deleted!");
@@ -117,7 +117,7 @@ const HomePage = () => {
             ...values,
             userId: user._id,
           },
-          transacationId: editable._id,
+          transactionId: editable._id,
         });
         setLoading(false);
         message.success("Transaction Updated Successfully");

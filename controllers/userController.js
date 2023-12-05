@@ -6,25 +6,28 @@ const loginController = async (req, res) => {
     const { email, password } = req.body;
     const user = await userModel.findOne({ email, password });
     if (!user) {
-      return res.status(404).send("User not Found");
+      return res.status(404).send("User Not Found");
     }
-    res.status(200).json(user);
+    res.status(200).json({
+      success: true,
+      user,
+    });
   } catch (error) {
     res.status(400).json({
-      success: true,
+      success: false,
       error,
     });
   }
 };
 
-// register callback
+//Register Callback
 const registerController = async (req, res) => {
   try {
-    const newUSer = new userModel(req.body);
-    await newUSer.save();
+    const newUser = new userModel(req.body);
+    await newUser.save();
     res.status(201).json({
       success: true,
-      newUSer,
+      newUser,
     });
   } catch (error) {
     res.status(400).json({
