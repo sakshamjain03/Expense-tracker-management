@@ -21,12 +21,12 @@ This is a full-stack web application built using the MERN stack (MongoDB, Expres
 
 To get started with this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/expense-management-system.git`
-2. Install the dependencies: `npm i express colors morgan dotenv concurrently` in main folder.
+1. Clone the repository: `git clone https://github.com/sakshamjain03/Expense-tracker-management`
+2. Install the dependencies: `npm i node-modules express colors morgan dotenv concurrently` in main folder.
 3. Go to Client Directory using `cd client` command in terminal and Install the dependencies: `npm i axios react-router-dom redux react-redux` 
 4. Set up the MongoDB connection: Update the MongoDB connection string in the `.env` file.
 5. Start the development server: `nodemon server.js` on PORT:8080 and `node server.js` on PORT:3000.
-6. Use `npm Dev` to run server and client application together on PORT:3000 make sure to install concurrently. 
+6. Use `npm run dev` to run server and client application together on PORT:3000 make sure to install concurrently. 
 
 ### `npm start`
 
